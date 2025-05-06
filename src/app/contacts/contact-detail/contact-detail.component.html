@@ -1,8 +1,8 @@
 <div class="panel panel-default">
-    <div class="panel-heading clearfix">
-        <h1 class="panel-title pull-left"><strong>Name</strong></h1>
+    <div class="panel-heading clearfix" style=" padding: 20px 15px;">
+        <h1 class="panel-title pull-left" style="font-size: large;"><strong>{{ contact.name }}</strong></h1>
         <div class="row" style="margin-top: 30px;">
-            <img src="" alt="" class="pull-left">
+            <img src="{{ contact.imageUrl }}" alt="" class="pull-left" style="max-height: 100px; padding-left: 15px;">
             <button class="btn btn-danger pull-right">Delete</button>
             <button class="btn btn-primary pull-right" style="margin-right: 5px;">Edit</button>
         </div>
@@ -12,8 +12,8 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-xs-12">
-                <p><strong>Phone:</strong> </p>
-                <p><strong>Email:</strong> </p>
+                <p><strong>Phone:</strong> {{ contact.phone }} </p>
+                <p><strong>Email:</strong> {{ contact.email }} </p>
             </div>
         </div>
     </div>
