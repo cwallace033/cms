@@ -11,9 +11,6 @@ import { DocumentService } from '../document.service';
 export class DocumentListComponent implements OnInit {
   @Output() selectedDocumentEvent = new EventEmitter<Document>();
 
-  onSelectedDocument(document: Document){
-    this.documentService.documentSelectedEvent.emit(document);
-  }
 
   constructor(private documentService: DocumentService) { }
 
