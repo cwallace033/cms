@@ -3,8 +3,10 @@
         <h1 class="panel-title pull-left" style="font-size: large;"><strong>{{ contact.name }}</strong></h1>
         <div class="row" style="margin-top: 30px;">
             <img src="{{ contact.imageUrl }}" alt="" class="pull-left" style="max-height: 100px; padding-left: 15px;">
-            <button class="btn btn-danger pull-right">Delete</button>
-            <button class="btn btn-primary pull-right" style="margin-right: 5px;">Edit</button>
+            <div class="pull-right" style="padding: 15px;">
+                <a [routerLink]="['edit']" class="btn btn-info" style="margin-right: 10px;" >Edit</a>
+                <a class="btn btn-danger" (click)="onDelete()">Delete</a>
+            </div>
         </div>
     </div>
     
