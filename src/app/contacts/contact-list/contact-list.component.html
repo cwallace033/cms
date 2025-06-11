@@ -4,12 +4,22 @@
         <a [routerLink]="['new']" class="btn btn-success pull-right">New Contact</a>
     </div>
 
-    <div class="row">
+    <div class="row" cdkDropList id="contactList" [cdkDropListData]="contacts">
         <div class="col-xs-12">
-            <cms-contact-item
-                *ngFor="let contact of contacts"
-                [contact]="contact"
-                [routerLink]="[contact.id]"></cms-contact-item>
+            <div
+            cdkDropList
+            id="contactList"
+            [cdkDropListData]="contacts"
+            [cdkDropListConnectedTo]="['groupList']">
+                
+                <cms-contact-item
+                    *ngFor="let contact of contacts"
+                    cdkDrag
+                    [cdkDragData]="contact"
+                    [contact]="contact"
+                    [routerLink]="[contact.id]">
+                </cms-contact-item>
+            </div>
         </div>
     </div>
 
