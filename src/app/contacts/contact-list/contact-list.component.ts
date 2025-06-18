@@ -21,7 +21,7 @@ export class ContactListComponent implements OnInit, OnDestroy {
       .subscribe((contactsList: Contact[]) => {
         this.contacts = contactsList;
       })
-      this.contacts = this.contactService.getContacts()
+      this.contactService.getContacts()
   }
 
   ngOnDestroy(): void {
